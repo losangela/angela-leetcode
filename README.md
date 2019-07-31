@@ -22,7 +22,4 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
 - bstToGst #1038. https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
   - Binary Search Tree, Recursion
   - Medium difficulty
-<<<<<<< HEAD
   - Javascript
-=======
->>>>>>> 08d8f1582736477dcbe935d34efcfebd291637d6
