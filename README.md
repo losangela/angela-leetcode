@@ -11,3 +11,7 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
 - numSubarrayProductLessThanK #713 https://leetcode.com/problems/subarray-product-less-than-k/
   - Dynamic programming, arrays, two pointers
   - Medium difficulty
+
+- bstToGst #1038. https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
+  - Binary Search Tree, Recursion
+  - Medium difficulty
