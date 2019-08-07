@@ -27,3 +27,17 @@ test('adds a new node', () => {
   expect(linkedList.head.next.next.val).toBe(15);
   expect(linkedList.tail.val).toBe(15);
 });
+
+test('pops old node out of list', () => {
+  expect(linkedList.pop().val).toBe(15);
+  expect(linkedList.tail.val).toBe(10);
+  expect(linkedList.length).toBe(2);
+  expect(linkedList.pop().val).toBe(10);
+  expect(linkedList.tail.val).toBe(5);
+  expect(linkedList.length).toBe(1);
+  expect(linkedList.pop().val).toBe(5);
+  expect(linkedList.tail).toBe(null);
+  expect(linkedList.length).toBe(0);
+  expect(linkedList.pop()).toBe(undefined);
+  expect(linkedList.length).toBe(0);
+})

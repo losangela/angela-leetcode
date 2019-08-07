@@ -27,6 +27,29 @@ class SinglyLinkedList {
     }
     this.length++
   }
+
+  pop() {
+    let popped = this.tail || undefined;
+    if (this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
+      return popped
+    }
+    let search = this.head
+    let found = false;
+    while (!found) {
+      if (search.next === this.tail) {
+        search.next = null;
+        this.tail = search;
+        found = true;
+        this.length--
+      } else {
+        search = search.next
+      }
+    }
+    return popped;
+  }
 }
 
 module.exports = SinglyLinkedList;
