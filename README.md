@@ -35,6 +35,12 @@ Some well known data structures and algorithms, the explanation behind each algo
   - Medium difficulty
   - Javascript
 
+- SinglyLinkedList
+  - Data Structures
+  - Medium difficulty
+  - Javascript
+  - Jest testing
+
 
 ### Dependencies
 
