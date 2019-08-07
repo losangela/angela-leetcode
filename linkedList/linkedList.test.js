@@ -44,10 +44,7 @@ test('pops old node out of list', () => {
 
 test('should get node by index', () => {
   linkedList = new SinglyLinkedList()
-  linkedList.push(5);
-  linkedList.push(10);
-  linkedList.push(15);
-  linkedList.push(20);
+  linkedList.push(5).push(10).push(15).push(20);
   expect(linkedList.get(0).val).toBe(5);
   expect(linkedList.get(1).val).toBe(10);
   expect(linkedList.get(2).val).toBe(15);
@@ -71,11 +68,7 @@ test('should insert node by index', () => {
 
 test('should rotate by number given', () => {
   linkedList = new SinglyLinkedList()
-  linkedList.push(5);
-  linkedList.push(10);
-  linkedList.push(15);
-  linkedList.push(20);
-  linkedList.push(25);
+  linkedList.push(5).push(10).push(15).push(20).push(25);
   expect(linkedList.head.val).toBe(5);
   expect(linkedList.tail.val).toBe(25);
   expect(linkedList.length).toBe(5);
@@ -90,11 +83,7 @@ test('should rotate by number given', () => {
   expect(linkedList.tail.next).toBe(null);
 
   linkedList = new SinglyLinkedList()
-  linkedList.push(5);
-  linkedList.push(10);
-  linkedList.push(15);
-  linkedList.push(20);
-  linkedList.push(25);
+  linkedList.push(5).push(10).push(15).push(20).push(25);
   expect(linkedList.head.val).toBe(5);
   expect(linkedList.tail.val).toBe(25);
   expect(linkedList.length).toBe(5);
@@ -109,11 +98,7 @@ test('should rotate by number given', () => {
   expect(linkedList.tail.next).toBe(null);
 
   linkedList = new SinglyLinkedList()
-  linkedList.push(5);
-  linkedList.push(10);
-  linkedList.push(15);
-  linkedList.push(20);
-  linkedList.push(25);
+  linkedList.push(5).push(10).push(15).push(20).push(25);
   expect(linkedList.head.val).toBe(5);
   expect(linkedList.tail.val).toBe(25);
   expect(linkedList.length).toBe(5);
@@ -126,4 +111,16 @@ test('should rotate by number given', () => {
   expect(linkedList.head.next.next.next.next.val).toBe(25);
   expect(linkedList.tail.val).toBe(25);
   expect(linkedList.tail.next).toBe(null);
+})
+
+test('should reassign new value to node at given index', () => {
+  linkedList = new SinglyLinkedList();
+  expect(linkedList.set(0,10)).toBe(true);
+  expect(linkedList.set(1,2)).toBe(true);
+  expect(linkedList.length).toBe(2);
+  expect(linkedList.head.val).toBe(10);
+  expect(linkedList.set(10,10)).toBe(false);
+  expect(linkedList.set(2,100)).toBe(true);
+  expect(linkedList.head.next.next.val).toBe(100);
+  expect(linkedList.tail.val).toBe(100);
 })
