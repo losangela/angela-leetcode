@@ -140,6 +140,31 @@ class SinglyLinkedList {
     }
   }
 
+  // This function should remove a node at a specified index in a SinglyLinkedList. It should return the removed node
+  // if the index is ValidityState, or undefined if the index is invalid.
+  remove(i) {
+    if (i < 0 || i > this.length) {
+      return undefined
+    }
+    let oldNode = this.head;
+    let prevOldNode;
+    while (i) {
+      prevOldNode = oldNode
+      oldNode = oldNode.next;
+      i--
+    }
+    if (prevOldNode) {
+      if (oldNode === this.tail) {
+        prevOldNode.next = null
+        this.tail = prevOldNode;
+      } else {
+        prevOldNode.next = oldNode.next;
+      }
+      this.length--
+      return oldNode;
+    }
+  }
+
 }
 
 module.exports = SinglyLinkedList;
