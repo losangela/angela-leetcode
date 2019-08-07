@@ -38,7 +38,7 @@ test('pops old node out of list', () => {
   expect(linkedList.pop().val).toBe(5);
   expect(linkedList.tail).toBeNull();
   expect(linkedList.length).toBe(0);
-  expect(linkedList.pop()).toBe(undefined);
+  expect(linkedList.pop()).toBeUndefined();
   expect(linkedList.length).toBe(0);
 })
 
@@ -123,4 +123,15 @@ test('should reassign new value to node at given index', () => {
   expect(linkedList.set(2,100)).toBe(true);
   expect(linkedList.head.next.next.val).toBe(100);
   expect(linkedList.tail.val).toBe(100);
+})
+
+test('should remove node at given index', () => {
+  linkedList = new SinglyLinkedList();
+  linkedList.push(5).push(10).push(15).push(20);
+  expect(linkedList.remove(2).val).toBe(15);
+  expect(linkedList.remove(100)).toBeUndefined();
+  expect(linkedList.length).toBe(3);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.head.next.val).toBe(10);
+  expect(linkedList.head.next.next.val).toBe(20);
 })
