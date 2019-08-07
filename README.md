@@ -23,3 +23,7 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Binary Search Tree, Recursion
   - Medium difficulty
   - Javascript
+
+### Dependencies
+
+- Added Jest testing
