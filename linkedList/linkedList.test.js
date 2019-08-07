@@ -4,8 +4,8 @@ let linkedList = new SinglyLinkedList()
 
 test('creates a new singly linked list', () => {
   expect(linkedList.length).toBe(0);
-  expect(linkedList.head).toBe(null);
-  expect(linkedList.tail).toBe(null);
+  expect(linkedList.head).toBeNull();
+  expect(linkedList.tail).toBeNull();
 });
 
 test('adds a new node', () => {
@@ -36,7 +36,7 @@ test('pops old node out of list', () => {
   expect(linkedList.tail.val).toBe(5);
   expect(linkedList.length).toBe(1);
   expect(linkedList.pop().val).toBe(5);
-  expect(linkedList.tail).toBe(null);
+  expect(linkedList.tail).toBeNull();
   expect(linkedList.length).toBe(0);
   expect(linkedList.pop()).toBe(undefined);
   expect(linkedList.length).toBe(0);
@@ -49,7 +49,7 @@ test('should get node by index', () => {
   expect(linkedList.get(1).val).toBe(10);
   expect(linkedList.get(2).val).toBe(15);
   expect(linkedList.get(3).val).toBe(20);
-  expect(linkedList.get(4)).toBe(null);
+  expect(linkedList.get(4)).toBeNull();
 })
 
 test('should insert node by index', () => {
@@ -80,7 +80,7 @@ test('should rotate by number given', () => {
   expect(linkedList.head.next.next.next.val).toBe(10);
   expect(linkedList.head.next.next.next.next.val).toBe(15);
   expect(linkedList.tail.val).toBe(15);
-  expect(linkedList.tail.next).toBe(null);
+  expect(linkedList.tail.next).toBeNull();
 
   linkedList = new SinglyLinkedList()
   linkedList.push(5).push(10).push(15).push(20).push(25);
@@ -95,7 +95,7 @@ test('should rotate by number given', () => {
   expect(linkedList.head.next.next.next.val).toBe(15);
   expect(linkedList.head.next.next.next.next.val).toBe(20);
   expect(linkedList.tail.val).toBe(20);
-  expect(linkedList.tail.next).toBe(null);
+  expect(linkedList.tail.next).toBeNull();
 
   linkedList = new SinglyLinkedList()
   linkedList.push(5).push(10).push(15).push(20).push(25);
@@ -110,7 +110,7 @@ test('should rotate by number given', () => {
   expect(linkedList.head.next.next.next.val).toBe(20);
   expect(linkedList.head.next.next.next.next.val).toBe(25);
   expect(linkedList.tail.val).toBe(25);
-  expect(linkedList.tail.next).toBe(null);
+  expect(linkedList.tail.next).toBeNull();
 })
 
 test('should reassign new value to node at given index', () => {
