@@ -81,6 +81,26 @@ class SinglyLinkedList {
       return true
     }
   }
+
+  rotate(num) {
+    num = num % this.length;
+    if (num < 0) {
+      num = num + this.length;
+    }
+    let newHead = this.head
+    let newTail;
+    while (num) {
+      newTail = newHead;
+      newHead = newHead.next;
+      num--
+    }
+    if (newTail) {
+      this.tail.next = this.head;
+      this.head = newHead;
+      this.tail = newTail
+      this.tail.next = null;
+    }
+  }
 }
 
 module.exports = SinglyLinkedList;

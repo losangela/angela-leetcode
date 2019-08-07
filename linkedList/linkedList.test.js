@@ -68,3 +68,62 @@ test('should insert node by index', () => {
   expect(linkedList.head.next.next.next.next.next.val).toBe(25);
   expect(linkedList.tail.val).toBe(25);
 })
+
+test('should rotate by number given', () => {
+  linkedList = new SinglyLinkedList()
+  linkedList.push(5);
+  linkedList.push(10);
+  linkedList.push(15);
+  linkedList.push(20);
+  linkedList.push(25);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.tail.val).toBe(25);
+  expect(linkedList.length).toBe(5);
+
+  linkedList.rotate(3);
+  expect(linkedList.head.val).toBe(20);
+  expect(linkedList.head.next.val).toBe(25);
+  expect(linkedList.head.next.next.val).toBe(5);
+  expect(linkedList.head.next.next.next.val).toBe(10);
+  expect(linkedList.head.next.next.next.next.val).toBe(15);
+  expect(linkedList.tail.val).toBe(15);
+  expect(linkedList.tail.next).toBe(null);
+
+  linkedList = new SinglyLinkedList()
+  linkedList.push(5);
+  linkedList.push(10);
+  linkedList.push(15);
+  linkedList.push(20);
+  linkedList.push(25);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.tail.val).toBe(25);
+  expect(linkedList.length).toBe(5);
+
+  linkedList.rotate(-1);
+  expect(linkedList.head.val).toBe(25);
+  expect(linkedList.head.next.val).toBe(5);
+  expect(linkedList.head.next.next.val).toBe(10);
+  expect(linkedList.head.next.next.next.val).toBe(15);
+  expect(linkedList.head.next.next.next.next.val).toBe(20);
+  expect(linkedList.tail.val).toBe(20);
+  expect(linkedList.tail.next).toBe(null);
+
+  linkedList = new SinglyLinkedList()
+  linkedList.push(5);
+  linkedList.push(10);
+  linkedList.push(15);
+  linkedList.push(20);
+  linkedList.push(25);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.tail.val).toBe(25);
+  expect(linkedList.length).toBe(5);
+
+  linkedList.rotate(1000);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.head.next.val).toBe(10);
+  expect(linkedList.head.next.next.val).toBe(15);
+  expect(linkedList.head.next.next.next.val).toBe(20);
+  expect(linkedList.head.next.next.next.next.val).toBe(25);
+  expect(linkedList.tail.val).toBe(25);
+  expect(linkedList.tail.next).toBe(null);
+})
