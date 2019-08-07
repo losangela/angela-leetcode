@@ -34,3 +34,9 @@ Some well known data structures and algorithms, the explanation behind each algo
   - Sorting, Recursion, Algorithm
   - Medium difficulty
   - Javascript
+
+
+### Dependencies
+
+- Added Jest testing
+- npm run test to run Jest

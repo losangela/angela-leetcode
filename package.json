@@ -1,0 +1,23 @@
+{
+  "name": "angela-leetcode",
+  "version": "1.0.0",
+  "description": "This repo contains solutions to leetcode problems ranging in difficulty and topic and a thorough explanation behind the logic. I will be posting on here daily!",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losangela/angela-leetcode.git"
+  },
+  "author": "github.com/losangela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/losangela/angela-leetcode/issues"
+  },
+  "homepage": "https://github.com/losangela/angela-leetcode#readme"
+}
