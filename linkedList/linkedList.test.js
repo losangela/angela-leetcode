@@ -54,3 +54,17 @@ test('should get node by index', () => {
   expect(linkedList.get(3).val).toBe(20);
   expect(linkedList.get(4)).toBe(null);
 })
+
+test('should insert node by index', () => {
+  expect(linkedList.insert(2, 12)).toBe(true);
+  expect(linkedList.insert(100, 12)).toBe(false);
+  expect(linkedList.length).toBe(5);
+  expect(linkedList.head.val).toBe(5);
+  expect(linkedList.head.next.val).toBe(10);
+  expect(linkedList.head.next.next.val).toBe(12);
+  expect(linkedList.head.next.next.next.val).toBe(15);
+  expect(linkedList.head.next.next.next.next.val).toBe(20);
+  expect(linkedList.insert(5, 25)).toBe(true);
+  expect(linkedList.head.next.next.next.next.next.val).toBe(25);
+  expect(linkedList.tail.val).toBe(25);
+})

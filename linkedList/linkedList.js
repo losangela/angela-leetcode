@@ -59,6 +59,28 @@ class SinglyLinkedList {
     }
     return node;
   }
+
+  insert(i, val) {
+    if (i > this.length) {
+      return false
+    } else {
+      let node = new Node(val)
+      let pointer = this.head;
+      let prev;
+      if (i === this.length) {
+        this.tail = node;
+      }
+      while (i) {
+        prev = pointer
+        pointer = pointer.next
+        i--
+      }
+      prev.next = node;
+      node.next = pointer;
+      this.length++
+      return true
+    }
+  }
 }
 
 module.exports = SinglyLinkedList;
