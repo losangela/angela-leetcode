@@ -50,6 +50,15 @@ class SinglyLinkedList {
     }
     return popped;
   }
+
+  get(val) {
+    let node = this.head;
+    while (val && node) {
+      node = node.next;
+      val--
+    }
+    return node;
+  }
 }
 
 module.exports = SinglyLinkedList;
