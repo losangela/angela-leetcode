@@ -24,6 +24,19 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Medium difficulty
   - Javascript
 
+# Data Structures & Algorithms
+
+Some well known data structures and algorithms, the explanation behind each algorithm.
+
+### All problems and links
+
+- mergeSort https://en.wikipedia.org/wiki/Merge_sort
+  - Sorting, Recursion, Algorithm
+  - Medium difficulty
+  - Javascript
+
+
 ### Dependencies
 
 - Added Jest testing
+- npm run test to run Jest
