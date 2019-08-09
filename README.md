@@ -35,7 +35,13 @@ Some well known data structures and algorithms, the explanation behind each algo
   - Medium difficulty
   - Javascript
 
-- SinglyLinkedList
+- SinglyLinkedList https://en.wikipedia.org/wiki/Linked_list
+  - Data Structures
+  - Medium difficulty
+  - Javascript
+  - Jest testing
+
+- BinarySearchTree https://en.wikipedia.org/wiki/Binary_search_tree
   - Data Structures
   - Medium difficulty
   - Javascript
