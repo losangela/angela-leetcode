@@ -123,6 +123,22 @@ class BinarySearchTree {
     arr.push(node.value)
     return arr
   }
+
+  //should search through each node in the bst using breadth first search and
+  //return an array containing each node's value.
+  breadthFirstSearch() {
+    let order = [this.root];
+    let arr = [];
+    for (let i = 0; i < order.length; i++) {
+      if (order[i].left) {
+        order.push(order[i].left)
+      } if (order[i].right) {
+        order.push(order[i].right)
+      } 
+      arr.push(order[i].value);
+    }
+    return arr
+  }
 }
 
 module.exports = BinarySearchTree

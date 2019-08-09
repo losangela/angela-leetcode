@@ -31,3 +31,7 @@ test('should find values in a BST by in-order', () => {
 test('should find values in a BST by post-order', () => {
   expect(bst.DFSPostOrder()).toEqual([5, 1, 12, 10, 50, 20, 15]);
 });
+
+test('should find values in a BST by breadth first', () => {
+  expect(bst.breadthFirstSearch()).toEqual([15, 10, 20, 1, 12, 50, 5]);
+});
