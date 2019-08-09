@@ -18,3 +18,8 @@ test('should find values in a BST', () => {
   expect(foundNode1.right.value).toBe(12);
   expect(foundNode2).toBeUndefined();
 });
+
+test('should find values in a BST', () => {
+  bst.insert(1).insert(5).insert(50)
+  expect(bst.DFSPreOrder()).toEqual([15, 10, 1, 5, 12, 20, 50]);
+});
