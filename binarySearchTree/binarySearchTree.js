@@ -108,6 +108,21 @@ class BinarySearchTree {
     }
     return arr
   }
+
+  //should search through each node in the bst using post-order depth first search and
+  // return an array containing each node's value.
+  DFSPostOrder(node) {
+    let arr = [];
+    if (node === undefined) {
+      node = this.root
+    } else if (node === null) {
+      return arr
+    }
+    arr = arr.concat(this.DFSPostOrder(node.left))
+    arr = arr.concat(this.DFSPostOrder(node.right))
+    arr.push(node.value)
+    return arr
+  }
 }
 
 module.exports = BinarySearchTree
