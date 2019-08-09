@@ -19,7 +19,11 @@ test('should find values in a BST', () => {
   expect(foundNode2).toBeUndefined();
 });
 
-test('should find values in a BST', () => {
+test('should find values in a BST by pre-order', () => {
   bst.insert(1).insert(5).insert(50)
   expect(bst.DFSPreOrder()).toEqual([15, 10, 1, 5, 12, 20, 50]);
+});
+
+test('should find values in a BST by in-order', () => {
+  expect(bst.DFSInOrder()).toEqual([1, 5, 10, 12, 15, 20, 50]);
 });

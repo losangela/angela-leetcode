@@ -88,6 +88,26 @@ class BinarySearchTree {
     }
     return arr
   }
+  
+  // should search through each node in the bst using in-order depth first search and
+  // return an array containing each node's value
+  DFSInOrder(node) {
+    let arr = [];
+    if (node === undefined) {
+      node = this.root
+    }
+    if (node.left) {
+      arr = arr.concat(this.DFSInOrder(node.left))
+      arr.push(node.value)
+      arr = arr.concat(this.DFSInOrder(node.right))
+    } else if (!node.left) {
+      arr.push(node.value)
+      if (node.right) {
+        arr = arr.concat(this.DFSInOrder(node.right))
+      }
+    }
+    return arr
+  }
 }
 
 module.exports = BinarySearchTree
