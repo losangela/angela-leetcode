@@ -148,7 +148,10 @@ class BinarySearchTree {
     let parent;
     let found = false;
     while (!found) {
-      if (node.value === value) {
+      if (node === null && value) {
+        found = true;
+        node = undefined;
+      } else if (node.value === value) {
         found = true;
       } else if (node.value < value) {
         parent = node;
@@ -157,6 +160,9 @@ class BinarySearchTree {
         parent = node;
         node = node.left;
       }
+    }
+    if (node === undefined) {
+      return undefined
     }
     if (!parent) {
       let remainder;
@@ -188,16 +194,55 @@ class BinarySearchTree {
       }
     } else {
       if (node.right && node.left) {
-        //node as two children
+        if (node.left.value < parent.value) {
+          parent.left = node.left;
+          let newParent = parent.left;
+          let found = false;
+          while (!found) {
+            if (newParent.right) {
+              if (node.right.value > newParent.right.value) {
+                newParent = newParent.right
+              }
+            } else {
+              found = true;
+              newParent.right = node.right;
+            }
+          }
+        } else {
+          parent.right = node.right;
+          let newParent = parent.right;
+          let found = false;
+          while (!found) {
+            if (newParent.left) {
+              if (node.left.value < newParent.left.value) {
+                newParent = newParent.left;
+              }
+            } else {
+              found = true;
+              newParent.left = node.left;
+            }
+          }
+
+        }
       } else if (node.right) {
-        // node only has one child on right
+        if (node.right.value < parent.value) {
+          parent.left = node.right;
+        } else {
+          parent.right = node.right;
+        }
       } else if (node.left) {
-        // node only has one child on left
+        if (node.left.value < parent.value) {
+          parent.left = node.left;
+        } else {
+          parent.right = node.left;
+        }
       } else {
         parent.right = null;
         parent.left = null;
       }
     }
+    node.left = null;
+    node.right = null;
     return node;
   }
 }
