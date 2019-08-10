@@ -108,6 +108,98 @@ class BinarySearchTree {
     }
     return arr
   }
+
+  //should search through each node in the bst using post-order depth first search and
+  // return an array containing each node's value.
+  DFSPostOrder(node) {
+    let arr = [];
+    if (node === undefined) {
+      node = this.root
+    } else if (node === null) {
+      return arr
+    }
+    arr = arr.concat(this.DFSPostOrder(node.left))
+    arr = arr.concat(this.DFSPostOrder(node.right))
+    arr.push(node.value)
+    return arr
+  }
+
+  //should search through each node in the bst using breadth first search and
+  //return an array containing each node's value.
+  breadthFirstSearch() {
+    let order = [this.root];
+    let arr = [];
+    for (let i = 0; i < order.length; i++) {
+      if (order[i].left) {
+        order.push(order[i].left)
+      } if (order[i].right) {
+        order.push(order[i].right)
+      } 
+      arr.push(order[i].value);
+    }
+    return arr
+  }
+
+  // should remove a node from a bst. function should be able to handle removal of the root
+  // node, removal of a node with one ChannelSplitterNode, and removal of a node with two children.
+  // function should return the node removed.
+  remove(value) {
+    let node = this.root;
+    let parent;
+    let found = false;
+    while (!found) {
+      if (node.value === value) {
+        found = true;
+      } else if (node.value < value) {
+        parent = node;
+        node = node.right;
+      } else if (node.value > value) {
+        parent = node;
+        node = node.left;
+      }
+    }
+    if (!parent) {
+      let remainder;
+      let newParent = this.root;
+      let found = false;
+      if (node.left) {
+        this.root = node.left;
+        remainder = node.right;
+      } else if (node.right) {
+        this.root = node.right;
+        remainder = node.left
+      }
+      while (!found) {
+        if (remainder.value > newParent.value) {
+          if (newParent.right) {
+            newParent = newParent.right
+          } else {
+            found = true;
+            newParent.right = remainder;
+          }
+        } else if (remainder.value < newParent.value) {
+          if (newParent.left) {
+            newParent = newParent.left
+          } else {
+            found = true;
+            newParent.left = remainder;
+          }
+        }
+      }
+    } else {
+      if (node.right && node.left) {
+        //node as two children
+      } else if (node.right) {
+        // node only has one child on right
+      } else if (node.left) {
+        // node only has one child on left
+      } else {
+        parent.right = null;
+        parent.left = null;
+      }
+    }
+    return node;
+  }
 }
 
 module.exports = BinarySearchTree
