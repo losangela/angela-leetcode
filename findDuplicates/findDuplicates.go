@@ -1,6 +1,3 @@
-/*
-Same prompt and solution as javascript version
-*/
 package main
 
 import "math"
