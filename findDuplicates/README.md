@@ -1,4 +1,4 @@
-### About
+## About
 
 findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
   - Memoization
@@ -7,7 +7,7 @@ findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-arra
   - Jest testing, Go testing
 
 
-### Prompt
+## Prompt
 
 Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array),
 some elements appear twice and others appear once.
@@ -15,7 +15,7 @@ Find all the elements that appear twice in this array.
 
 Could you do it without extra space and in O(n) runtime?
 
-### Solution
+## Solution
 
 This solution is really simple and I'm not sure why it was categorized as a medium level problem.
 I added a memoize array that keeps track of integers that appear in the input array. Since the 
