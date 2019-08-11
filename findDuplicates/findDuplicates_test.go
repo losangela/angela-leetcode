@@ -28,9 +28,10 @@ func TestFindDuplicates(t *testing.T) {
 			t.Errorf("got %d want %d given, %v", got, want, numbers)
 		}
 	})
+
 	t.Run("should find all duplicates in a really long array", func(t *testing.T) {
 		numbers := []int{1, 2}
-		for i := 1; i < 10; i++ {
+		for i := 1; i < 10000000; i++ {
 			numbers = append(numbers, i)
 		}
 
