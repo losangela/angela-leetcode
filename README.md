@@ -30,6 +30,12 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Javascript, Go
   - Jest testing, Go testing
 
+- arrayNesting #565 https://leetcode.com/problems/array-nesting/submissions/
+  - Dynamic programming, arrays, integers
+  - Medium difficulty
+  - Javascript, Go
+  - Jest testing, Go testing
+
 # Data Structures & Algorithms
 
 Some well known data structures and algorithms, the explanation behind each algorithm.
