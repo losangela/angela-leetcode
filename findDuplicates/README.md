@@ -1,7 +1,7 @@
 ## About
 
 findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
-  - Memoization
+  - Dynamic programming, integers
   - Medium difficulty
   - Javascript, Go
   - Jest testing, Go testing
