@@ -67,3 +67,15 @@ Notice that S[0], S[2], S[5], and S[6] solutions are the same but rotated number
 there is no reason to make a new copy of the array each time you iterate through and mark positions
 passed. This cuts down on time complexity as well, so S[2], S[4], S[5], and S[6] never even have to
 iterate through because their index will begin at -1.
+
+## Observations
+These are the runtime and memory usage of the solutions in each langauge.
+```
+RUNTIME      MEMORY      LANGUAGE
+12ms         5.9mb        golang
+16ms         5.9mb        golang
+12ms         5.9mb        golang
+72ms        36.9mb       javascript
+76ms          37mb       javascript
+72ms        36.8mb       javascript
+```
