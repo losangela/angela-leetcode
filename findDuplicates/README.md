@@ -1,14 +1,13 @@
-- findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
+### About
+
+findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
   - Memoization
   - Medium difficulty
   - Javascript, Go
   - Jest testing, Go testing
 
 
-
-========================================
-================PROMPT==================
-========================================
+### Prompt
 
 Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array),
 some elements appear twice and others appear once.
@@ -16,10 +15,8 @@ Find all the elements that appear twice in this array.
 
 Could you do it without extra space and in O(n) runtime?
 
+### Solution
 
-========================================
-================SOLUTION================
-========================================
 This solution is really simple and I'm not sure why it was categorized as a medium level problem.
 I added a memoize array that keeps track of integers that appear in the input array. Since the 
 constraint is that each number appears only once or twice, I only had to go through the input
@@ -37,6 +34,7 @@ and if a searched index was found to contain a negative integer, it means it was
 
 Here is the code for that solution:
 
+```
 const findDuplicates = nums => {
   let result = [];
   for (let i = 0; i < nums.length; i++) {
@@ -49,6 +47,7 @@ const findDuplicates = nums => {
   }
   return result
 }
+```
 
 This works because another constraint of the prompt was that all the integers contained in the array
 will not be greater than the size of the array. Therefore all integers contained in the array
