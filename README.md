@@ -27,8 +27,8 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
 - findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
   - Memoization
   - Medium difficulty
-  - Javascript
-  - Jest testing
+  - Javascript, Go
+  - Jest testing, Go testing
 
 # Data Structures & Algorithms
 
