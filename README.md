@@ -19,10 +19,16 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Medium difficulty
   - Javascript
 
-- bstToGst #1038. https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
+- bstToGst #1038 https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
   - Binary Search Tree, Recursion
   - Medium difficulty
   - Javascript
+
+- findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
+  - Memoization
+  - Medium difficulty
+  - Javascript
+  - Jest testing
 
 # Data Structures & Algorithms
 
