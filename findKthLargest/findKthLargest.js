@@ -63,15 +63,16 @@ class PriorityQueue{
             } else {
               this.front = newNode;
             }
-          found = true
+            found = true
           }
         }
-      this.length++
+        this.length++
       }
     }
   }
 }
-var findKthLargest = function(nums, k) {
+
+const findKthLargest = function(nums, k) {
   let pq = new PriorityQueue(k)
   for (let i = 0; i < nums.length; i++) {
       pq.enqueue(nums[i])

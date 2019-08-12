@@ -30,9 +30,9 @@ Note:
 
 I saw two ways of solving for this problem. The easy solution would be to sort the array and find the K largest
 by index. The other solution would be to put a priority queue with a sest length and iterate through the input
-array and then at the end return the first in the priority queue. This solution has better time and space
-complexity. I made a priority queue with a linked list implementation. The priority queue's stack limit is
-declared by the K that is passed in.
+array and then at the end return the first in the priority queue. This solution has better time complexity. I
+made a priority queue with a linked list implementation. The priority queue's stack limit is declared by the K
+that is passed in.
 
 For example 1, we have Input: [3,2,1,5,6,4] and k = 2 and we have Output: 5
 First We declare a priority queue with a length limit of 2. Then we iterate through the input array and enqueue
@@ -57,6 +57,9 @@ We have finished iterating through the input array. Return the front of the queu
 These are the runtime and memory usage of the solutions in each langauge.
 ```
 RUNTIME      MEMORY      LANGUAGE
+ 8ms           4mb        golang
+ 8ms           4mb        golang
+ 8ms           4mb        golang
 56ms        36.6mb       javascript
 60ms        36.7mb       javascript
 64ms        36.7mb       javascript
