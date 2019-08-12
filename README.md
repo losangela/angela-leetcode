@@ -36,6 +36,12 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Javascript, Go
   - Jest testing, Go testing
 
+- findKthLargest #215 https://leetcode.com/problems/kth-largest-element-in-an-array/
+  - linked list
+  - Medium difficulty
+  - Javascript, Go
+  - Jest testing, Go testing
+
 # Data Structures & Algorithms
 
 Some well known data structures and algorithms, the explanation behind each algorithm.
