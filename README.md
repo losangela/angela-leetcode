@@ -14,6 +14,12 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Binary Search Tree, Recursion
   - Medium difficulty
   - Javascript
+
+- countBattleships #419 https://leetcode.com/problems/battleships-in-a-board/
+  - Matrix
+  - Medium difficulty
+  - Javascript, Go
+  - Jest testing, Go testing
   
 - defangIPaddr #1108. https://leetcode.com/problems/defanging-an-ip-address/
   - string, loop, basics
