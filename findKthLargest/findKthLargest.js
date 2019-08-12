@@ -4,21 +4,21 @@ class Node {
     this.next = null;
   }
 }
-class LinkedList{
+class PriorityQueue{
   constructor(k) {
-    this.head = null;
+    this.front = null;
     this.length = 0;
     this.limit = k;
   }
   
-  add(val) {
+  enqueue(val) {
     let newNode = new Node(val)
-    if (this.head === null) {
-      this.head = newNode
+    if (this.front === null) {
+      this.front = newNode
       this.length++
     } else {
       if (this.length === this.limit) {
-        let replaceNode = this.head;
+        let replaceNode = this.front;
         let parent;
         let found = false;
         while (!found) {
@@ -27,19 +27,19 @@ class LinkedList{
             replaceNode = replaceNode.next;
           } else if (replaceNode.val <= val && !replaceNode.next) {
             replaceNode.next = newNode;
-            this.head = this.head.next
+            this.front = this.front.next
             found = true
           } else if (replaceNode.val > val && parent) {
             newNode.next = replaceNode;
             parent.next = newNode;
-            this.head = this.head.next;
+            this.front = this.front.next;
             found = true
           } else {
-            found = true
+            return
           }
         }
       } else if (this.length < this.limit) {
-        let current = this.head;
+        let current = this.front;
         let parent;
         let found = false;
         while (!found) {
@@ -61,7 +61,7 @@ class LinkedList{
             if (parent) {
               parent.next = newNode;
             } else {
-              this.head = newNode;
+              this.front = newNode;
             }
           found = true
           }
@@ -72,11 +72,11 @@ class LinkedList{
   }
 }
 var findKthLargest = function(nums, k) {
-  let ll = new LinkedList(k)
+  let pq = new PriorityQueue(k)
   for (let i = 0; i < nums.length; i++) {
-      ll.add(nums[i])
+      pq.enqueue(nums[i])
   }
-  return ll.head.val
+  return pq.front.val
 };
 
 module.exports = findKthLargest
