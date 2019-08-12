@@ -71,7 +71,6 @@ func (pq *PriorityQueue) Enqueue(val int) {
 				}
 			}
 			pq.length++
-			//not reached limit
 		}
 	}
 	return
