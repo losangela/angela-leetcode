@@ -4,34 +4,24 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
 
 ### All problems and links
 
-- defangIPaddr #1108. https://leetcode.com/problems/defanging-an-ip-address/
-  - string, loop, basics
-  - Easy difficulty
+- arrayNesting #565 https://leetcode.com/problems/array-nesting/submissions/
+  - Dynamic programming, arrays, integers
+  - Medium difficulty
   - Javascript, Go
-
-- productExceptSelf #238 https://leetcode.com/problems/product-of-array-except-self/submissions/
-  - Dynamic programming, arrays
-  - Medium difficulty
-  - Javascript
-  
-- numSubarrayProductLessThanK #713 https://leetcode.com/problems/subarray-product-less-than-k/
-  - Dynamic programming, arrays, two pointers
-  - Medium difficulty
-  - Javascript
+  - Jest testing, Go testing
 
 - bstToGst #1038 https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
   - Binary Search Tree, Recursion
   - Medium difficulty
   - Javascript
+  
+- defangIPaddr #1108. https://leetcode.com/problems/defanging-an-ip-address/
+  - string, loop, basics
+  - Easy difficulty
+  - Javascript, Go
 
 - findDuplicates #442 https://leetcode.com/problems/find-all-duplicates-in-an-array/
   - Dynamic programming, integers
-  - Medium difficulty
-  - Javascript, Go
-  - Jest testing, Go testing
-
-- arrayNesting #565 https://leetcode.com/problems/array-nesting/submissions/
-  - Dynamic programming, arrays, integers
   - Medium difficulty
   - Javascript, Go
   - Jest testing, Go testing
@@ -41,6 +31,16 @@ This repo contains solutions to leetcode problems ranging in difficulty and topi
   - Medium difficulty
   - Javascript, Go
   - Jest testing, Go testing
+
+- numSubarrayProductLessThanK #713 https://leetcode.com/problems/subarray-product-less-than-k/
+  - Dynamic programming, arrays, two pointers
+  - Medium difficulty
+  - Javascript
+
+- productExceptSelf #238 https://leetcode.com/problems/product-of-array-except-self/submissions/
+  - Dynamic programming, arrays
+  - Medium difficulty
+  - Javascript
 
 # Data Structures & Algorithms
 
