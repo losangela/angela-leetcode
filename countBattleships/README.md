@@ -43,6 +43,9 @@ horizontally and vertically.
 These are the runtime and memory usage of the solutions in each langauge.
 ```
 RUNTIME      MEMORY      LANGUAGE
+ 0ms         2.4mb        golang
+ 0ms         2.4mb        golang
+ 0ms         2.4mb        golang
 48ms        36.4mb       javascript
 56ms        36.5mb       javascript
 48ms        36.4mb       javascript
