@@ -74,5 +74,5 @@ Some well known data structures and algorithms, the explanation behind each algo
 
 ### Dependencies
 
-- Added Jest testing
+- Added Jest testing. npm i to install dependencies
 - npm run test to run Jest
