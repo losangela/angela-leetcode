@@ -1,4 +1,4 @@
-# Angela's Leetcode solutions
+# Leetcode solutions
 
 This repo contains solutions to leetcode problems ranging in difficulty and topic and a thorough explanation behind the logic. I will be posting on here daily!
 
