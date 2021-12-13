@@ -10,7 +10,7 @@ What is the largest prime factor of the number 600851475143 ?
 */
 
 
-const numberIsPrime = (n) => { // must be greater than 2
+export const numberIsPrime = (n) => { // must be greater than 2
   let isPrime = true;
   let i = 2;
   while (i < n) {
