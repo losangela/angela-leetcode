@@ -11,9 +11,13 @@ What is the largest prime factor of the number 600851475143 ?
 
 
 export const numberIsPrime = (n) => { // must be greater than 2
+  if (n < 2) {
+    return false
+  }
   let isPrime = true;
   let i = 2;
-  while (i < n) {
+  let stop = Math.ceil(n/2);
+  while (i <= stop) {
     if (n % i === 0) {
       isPrime = false
       break;
@@ -23,4 +27,4 @@ export const numberIsPrime = (n) => { // must be greater than 2
   return isPrime
 }
 
-console.log(numberIsPrime(2))
+// console.log(numberIsPrime(2))
