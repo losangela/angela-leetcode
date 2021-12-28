@@ -13,9 +13,9 @@ const sumOfDigitsOfN = (n) => {
   let bigNToString = BigInt(n).toString();
   let sum = 0;
   for (let i = 0; i < bigNToString.length; i++) {
-    sum += parseInt(bigNToString[i], 10)
-  }
-  return sum
-}
+    sum += parseInt(bigNToString[i], 10);
+  };
+  return sum;
+};
 
-console.log(sumOfDigitsOfN(Math.pow(2, 1000)))
+console.log(sumOfDigitsOfN(2**1000));
