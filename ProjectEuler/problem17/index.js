@@ -19,3 +19,65 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-
 1,002: a thousand
 
 */
+
+const words = {
+  1: 'one',
+  2: 'two',
+  3: 'three',
+  4: 'four',
+  5: 'five',
+  6: 'six',
+  7: 'seven',
+  8: 'eight',
+  9: 'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve',
+  13: 'thirteen',
+  14: 'fourteen',
+  15: 'fifteen',
+  16: 'sixteen',
+  17: 'seventeen',
+  18: 'eighteen',
+  19: 'nineteen',
+  20: 'twenty',
+  30: 'thirty',
+  40: 'forty',
+  50: 'fifty',
+  60: 'sixty',
+  70: 'seventy',
+  80: 'eighty',
+  90: 'ninety',
+  100: 'hundred',
+  1000: 'thousand',
+}
+
+const numberToWord = (n) => {
+  if (n < 21) {
+    return words[n];
+  }
+  if (n < 100) {
+    let nToStr = n.toString();
+    return nToStr[1] === '0' ? words[n] : words[nToStr[0] + '0'] + words[nToStr[1]];
+  }
+  if (n < 1000) {
+    let nToStr = n.toString();
+    let tens = parseInt(nToStr.substring(1), 10);
+    return words[nToStr[0]] + words[100] + (tens ? 'and' + numberToWord(tens) : '');
+  }
+  if (n === 1000) {
+    return words[1] + words[n];
+  }
+
+};
+
+const numberLetterCounts = (n) => {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    count += numberToWord(i).length;
+  }
+  return count;
+}
+
+
+console.log(numberLetterCounts(1000))
