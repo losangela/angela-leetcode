@@ -13,11 +13,11 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
 
 package ProjectEuler.problem24;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class solution {
   public static String allPermutations(String str) {
-    ArrayList<String> perms = new ArrayList<String>();
+    // ArrayList<String> perms = new ArrayList<String>();
     Integer permsCount = 0;
 
     for (int a = 0; a < str.length(); a++) {
@@ -47,8 +47,8 @@ public class solution {
         }
       }
     }
-
-    return perms.get(999999);
+    return str;
+    // return perms.get(999999);
   }
   public static void main(String args[]) {
 
