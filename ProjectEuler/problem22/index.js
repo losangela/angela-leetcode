@@ -11,8 +11,26 @@ What is the total of all the name scores in the file?
 
 */
 
-import fs from 'fs';
+import NAMES from './p022_names.js';
 
-var array = fs.readFileSync('/p022_names.txt').toString().split('\n');
+NAMES.sort();
 
-console.log({array})
+const getAlphabetValue = (str) => {
+  let sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    sum += str.charCodeAt(i) - 64;
+  }
+  return sum
+}
+
+const scoreOfName = (str, i) => getAlphabetValue(str) * i;
+
+const totalScoresOfNames = () => {
+  let total = 0;
+  for (let i = 0; i < NAMES.length; i++) {
+    total += scoreOfName(NAMES[i], i + 1)
+  }
+  return total
+}
+
+console.log(totalScoresOfNames())
