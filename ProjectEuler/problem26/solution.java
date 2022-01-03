@@ -22,14 +22,15 @@ Find the value of d < 1000 for which 1/d contains the longest recurring cycle in
 
 package ProjectEuler.problem26;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 public class solution {
   public static void decimal() {
-    double num = (double) 1/7;
+    double num = 1d/7d;
     // DecimalFormat df = new DecimalFormat("#.#######");
     DecimalFormat df = new DecimalFormat("#.################################################################################################################################################################################################################################################################################################################################################");
-    System.out.println(df.format(num));
+    System.out.println(new BigDecimal(num));
 
   }
 
