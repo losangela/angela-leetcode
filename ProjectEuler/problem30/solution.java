@@ -19,9 +19,31 @@ Find the sum of all the numbers that can be written as the sum of fifth powers o
 package ProjectEuler.problem30;
 
 public class solution {
-  public static void main(String args[]) {
 
-    System.out.println();
+  public static int sumOfDigitsPowered5(int n) {
+    int sum = 0;
+
+    while (n != 0) {
+      int digit = n % 10;
+      sum += (int) Math.pow(digit, 5);
+      n /= 10;
+    }
+
+    return sum;
+  }
+
+  public static void main(String args[]) {
+    // 9^5 * 7 will be a 6 digit number, so count up to the first 7 digit number.
+
+    int count = 0;
+
+    for (int i = 2; i < 1_000_000; i++) {
+      if (i == sumOfDigitsPowered5(i)) {
+        count++;
+      }
+    }
+
+    System.out.println(count);
 
   }
 }
