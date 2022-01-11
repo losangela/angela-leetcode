@@ -54,4 +54,27 @@ const fibonacciSum = () => {
   return sum;
 }
 
-console.log(fibonacciSum()) // 4613732
+const solution2 = () => {
+  let sum = 0;
+  let prev = 0;
+  let curr = 1;
+  let fib = 0;
+
+  while (true) {
+    fib = prev + curr;
+    if (fib > 4_000_000) {
+      break;
+    };
+    if (fib % 2 === 0) {
+      sum += fib;
+    };
+    prev = curr;
+    curr = fib;
+  };
+
+  return sum;
+};
+
+console.time('test');
+console.log(solution2()); // 4613732
+console.timeEnd('test');
