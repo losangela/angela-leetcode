@@ -43,4 +43,6 @@ const differenceOfSumOfSquaresAndSumOfNumbersSquared = (n) => {
   return Math.pow(sumOfNumbersUpTo(n), 2) - sumOfSquaresUpTo(n)
 }
 
-console.log(differenceOfSumOfSquaresAndSumOfNumbersSquared(100))
+console.time('test');
+console.log(differenceOfSumOfSquaresAndSumOfNumbersSquared(100));
+console.timeEnd('test');
