@@ -25,4 +25,4 @@ const findNthPrimeNumber = (n) => {
 }
 
 
-console.log(findNthPrimeNumber(10001))
+console.log(findNthPrimeNumber(10_001))

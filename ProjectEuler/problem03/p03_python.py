@@ -1,7 +1,7 @@
 import time
 
 def isPrime(n):
-  for int in range(2, n):
+  for int in range(2, -(n//-2)):
     if n % int == 0:
       return False
   return True
@@ -15,12 +15,8 @@ def largestPrimeFactor(n):
       return int
 
 
+# start = time.time()
+# answer = largestPrimeFactor(600_851_475_143)
 
-
-
-start = time.time()
-answer = largestPrimeFactor(600_851_475_143)
-# answer = largestPrimeFactor(22)
-
-end = time.time()
-print("Done! The answer is:", answer, "and the runtime was:", (end - start)*1000, "ms")
+# end = time.time()
+# print("Done! The answer is:", answer, "and the runtime was:", (end - start)*1000, "ms")
