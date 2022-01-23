@@ -37,7 +37,7 @@ const greatestProductOfNAdjacentDigits = (n) => {
 
   for (let i = 0; i < giantNumber.length - n; i++) {
     let product = 1;
-    for (let j = i; j < i + 13; j++) {
+    for (let j = i; j < i + n; j++) {
       let num = parseInt(giantNumber[j], 10);
       if (!num) {
         i = j;
@@ -51,4 +51,6 @@ const greatestProductOfNAdjacentDigits = (n) => {
   return maxProduct
 }
 
+console.time('test');
 console.log(greatestProductOfNAdjacentDigits(13))
+console.timeEnd('test');
