@@ -22,7 +22,7 @@ const findPythagoreanTriplet = () => {
 
   while (a < 333) {
     for (let i = b; i < Math.floor((1000 - a)/2); i++) {
-      if (a + b + c() === 1000) {
+      if (a + b + c() === 1000 || a + b + c() > 1000 ) {
         break;
       }
       b++;
@@ -37,4 +37,6 @@ const findPythagoreanTriplet = () => {
   console.log({ a, b, c: c(), product: product()})
 }
 
+console.time("test");
 findPythagoreanTriplet();
+console.timeEnd("test");
