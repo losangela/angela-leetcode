@@ -4,11 +4,8 @@ from cmath import inf
 def solution(nums):
   sum = -inf
   largest = -inf
-  for i in range(len(nums)):
-    if nums[i] > sum:
-      sum = nums[i]
-    else:
-      sum += nums[i]
+  for int in nums:
+    sum = max(int, sum + int)
     largest = max(sum, largest)
   return largest
 
