@@ -1,6 +1,5 @@
 from cmath import inf
 
-
 def solution(nums):
   sum = -inf
   largest = -inf
