@@ -6,7 +6,9 @@
   "dependencies": {
     "jest": "^24.8.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.11.11"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -19,6 +21,5 @@
   "bugs": {
     "url": "https://github.com/losangela/angela-leetcode/issues"
   },
-  "type": "module",
   "homepage": "https://github.com/losangela/angela-leetcode#readme"
 }

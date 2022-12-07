@@ -75,7 +75,7 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
     const MAX_SIZE = 100_000;
     let dirSizeCount = 0;
 
-    const traverse = (node) => {
+    const traverse = (node):void => {
       const { children } = node;
       for (let i = 0; i < children.length; i++) {
         if (children[i].type === fileSystemTypes.DIR) {
@@ -89,9 +89,34 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
 
     traverse(fileSystemTree);
     return dirSizeCount;
+  };
+
+  const partTwo = ():number => {
+    const TOTAL_SPACE = 70_000_000;
+    const MIN_UNUSED_SPACE = 30_000_000;
+
+    const totalSizeOfHead = fileSystemTree.size;
+    const minNeededSpace = totalSizeOfHead - (TOTAL_SPACE - MIN_UNUSED_SPACE);
+
+    const directoriesSize:number[] = [];
+
+    const traverse = (node):void => {
+      if (node.type === fileSystemTypes.DIR) {
+        directoriesSize.push(node.size);
+        for (let i = 0; i < node.children.length; i++) {
+          traverse(node.children[i]);
+        }
+      }
+    };
+
+    traverse(fileSystemTree);
+    directoriesSize.sort((a, b) => a - b);
+    
+    return directoriesSize.find(size => size >= minNeededSpace);
   }
 
   buildTree();
   const answerToPartOne = partOne();
-  console.log({answerToPartOne})
+  const answerToPartTwo = partTwo();
+  console.log({answerToPartOne, answerToPartTwo});
 })
